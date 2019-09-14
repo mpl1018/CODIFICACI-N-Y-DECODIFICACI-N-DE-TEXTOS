@@ -1,0 +1,428 @@
+Tabla de frecuencias de idioma1:
+a 1
+b 1
+c 1
+d 1
+e 1
+
+Tabla de frecuencias de idioma3:
+! 2
+# 4
+$ 5
+% 6
+& 7
+* 9
++ 11
+- 12
+/ 8
+: 14
+; 15
+< 16
+= 10
+@ 3
+_ 13
+º 17
+À 1
+ñ 18
+
+Treecode de idioma1:
+recorrido en preorden:
+abecd 5
+cd 2
+c 1
+d 1
+abe 3
+e 1
+ab 2
+a 1
+b 1
+recorrido en inorden:
+c 1
+cd 2
+d 1
+abecd 5
+e 1
+abe 3
+a 1
+ab 2
+b 1
+
+Treecode de idioma2:
+recorrido en preorden:
+abcde 15
+cde 6
+c 3
+de 3
+e 1
+d 2
+ab 9
+b 4
+a 5
+recorrido en inorden:
+c 3
+cde 6
+e 1
+de 3
+d 2
+abcde 15
+b 4
+ab 9
+a 5
+
+Treecode de idioma3:
+recorrido en preorden:
+!À@%-+=&/;:_#$*ñ<º 171
+#$*ñ<º 69
+<º 33
+< 16
+º 17
+#$*ñ 36
+#$* 18
+#$ 9
+# 4
+$ 5
+* 9
+ñ 18
+!À@%-+=&/;:_ 102
+!À@%-+= 45
++= 21
+= 10
++ 11
+!À@%- 24
+!À@% 12
+!À@ 6
+!À 3
+À 1
+! 2
+@ 3
+% 6
+- 12
+&/;:_ 57
+:_ 27
+_ 13
+: 14
+&/; 30
+&/ 15
+& 7
+/ 8
+; 15
+recorrido en inorden:
+< 16
+<º 33
+º 17
+#$*ñ<º 69
+# 4
+#$ 9
+$ 5
+#$* 18
+* 9
+#$*ñ 36
+ñ 18
+!À@%-+=&/;:_#$*ñ<º 171
+= 10
++= 21
++ 11
+!À@%-+= 45
+À 1
+!À 3
+! 2
+!À@ 6
+@ 3
+!À@% 12
+% 6
+!À@%- 24
+- 12
+!À@%-+=&/;:_ 102
+_ 13
+:_ 27
+: 14
+&/;:_ 57
+& 7
+&/ 15
+/ 8
+&/; 30
+; 15
+
+Codigos de idioma1:
+a 110
+b 111
+c 00
+d 01
+e 10
+
+Codigos de idioma2:
+a 11
+b 10
+c 00
+d 011
+e 010
+
+Codigos de idioma3:
+! 1010001
+# 01000
+$ 01001
+% 10101
+& 11100
+* 0101
++ 1001
+- 1011
+/ 11101
+: 1101
+; 1111
+< 000
+= 1000
+@ 101001
+_ 1100
+º 001
+À 1010000
+ñ 011
+
+Codigo de À en idioma3:
+À 1010000
+
+Codifica en idioma3 el texto:
+ÀÀÀ
+101000010100001010000
+
+Decodifica en idioma3 el texto:
+101000010100001010000
+ÀÀÀ
+
+Modificado idioma3
+
+Tabla de frecuencias de idioma3:
+! 2
+# 4
+$ 5
+% 6
+& 7
+* 9
++ 11
+- 12
+/ 8
+: 14
+; 15
+< 16
+= 10
+@ 3
+_ 13
+º 17
+À 2
+ñ 18
+
+Treecode de idioma3:
+recorrido en preorden:
+!À@%-+=&/;:_#$*ñ<º 172
+#$*ñ<º 69
+<º 33
+< 16
+º 17
+#$*ñ 36
+#$* 18
+#$ 9
+# 4
+$ 5
+* 9
+ñ 18
+!À@%-+=&/;:_ 103
+!À@%-+= 46
++= 21
+= 10
++ 11
+!À@%- 25
+- 12
+!À@% 13
+% 6
+!À@ 7
+@ 3
+!À 4
+! 2
+À 2
+&/;:_ 57
+:_ 27
+_ 13
+: 14
+&/; 30
+&/ 15
+& 7
+/ 8
+; 15
+recorrido en inorden:
+< 16
+<º 33
+º 17
+#$*ñ<º 69
+# 4
+#$ 9
+$ 5
+#$* 18
+* 9
+#$*ñ 36
+ñ 18
+!À@%-+=&/;:_#$*ñ<º 172
+= 10
++= 21
++ 11
+!À@%-+= 46
+- 12
+!À@%- 25
+% 6
+!À@% 13
+@ 3
+!À@ 7
+! 2
+!À 4
+À 2
+!À@%-+=&/;:_ 103
+_ 13
+:_ 27
+: 14
+&/;:_ 57
+& 7
+&/ 15
+/ 8
+&/; 30
+; 15
+
+Codigo de À en idioma3:
+À 1011111
+
+Anadido idioma4
+
+Treecode de idioma5:
+recorrido en preorden:
+ab 2
+a 1
+b 1
+recorrido en inorden:
+a 1
+ab 2
+b 1
+
+Codigos de idioma5:
+a 0
+b 1
+
+Codifica en idioma4 el texto:
+À!ñÑ
+El texto no pertenece al idioma; primer caracter que falla: Ñ
+
+Codifica en idioma4 el texto:
+ÑÀ!ñ
+El texto no pertenece al idioma; primer caracter que falla: Ñ
+
+Decodifica en idioma3 el texto:
+0
+El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: 0
+
+Decodifica en idioma1 el texto:
+1101111
+El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: 6
+
+Decodifica en idioma5 el texto:
+1010101011111
+bababababbbbb
+
+Modificado idioma3
+
+Tabla de frecuencias de idioma3:
+! 2
+# 4
+$ 5
+% 6
+& 7
+* 9
++ 11
+- 12
+/ 8
+: 14
+; 15
+< 32
+= 10
+@ 3
+_ 13
+w 4
+º 34
+À 6
+ñ 18
+
+Treecode de idioma3:
+recorrido en preorden:
+!@$=ñ%À+-_#w&:*/;<º 213
+!@$=ñ%À+-_ 86
+!@$=ñ 38
+ñ 18
+!@$= 20
+!@$ 10
+!@ 5
+! 2
+@ 3
+$ 5
+= 10
+%À+-_ 48
+%À+ 23
++ 11
+%À 12
+% 6
+À 6
+-_ 25
+- 12
+_ 13
+#w&:*/;<º 127
+#w&:*/; 61
+#w&: 29
+: 14
+#w& 15
+& 7
+#w 8
+# 4
+w 4
+*/; 32
+; 15
+*/ 17
+/ 8
+* 9
+<º 66
+< 32
+º 34
+recorrido en inorden:
+ñ 18
+!@$=ñ 38
+! 2
+!@ 5
+@ 3
+!@$ 10
+$ 5
+!@$= 20
+= 10
+!@$=ñ%À+-_ 86
++ 11
+%À+ 23
+% 6
+%À 12
+À 6
+%À+-_ 48
+- 12
+-_ 25
+_ 13
+!@$=ñ%À+-_#w&:*/;<º 213
+: 14
+#w&: 29
+& 7
+#w& 15
+# 4
+#w 8
+w 4
+#w&:*/; 61
+; 15
+*/; 32
+/ 8
+*/ 17
+* 9
+#w&:*/;<º 127
+< 32
+<º 66
+º 34
+
+Codigo de À en idioma3:
+À 01011

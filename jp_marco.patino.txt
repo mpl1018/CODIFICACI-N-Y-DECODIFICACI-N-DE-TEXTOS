@@ -1,0 +1,342 @@
+#En este juego de pruebas se testean algunos casos especiales que están fuera de los juegos de pruebas públicos, para intentar comprobar la corrección de
+toda la práctica.
+
+---------------<INPUT COMENTADO>---------------
+
+2
+
+idioma1                                                                           #Un idioma de 10 caracteres, todos ellos especiales.
+10
+À 1 Ç 2 ü 3 ë 4 Ä 5 É 6 ö 8 ú 11 Ã 15 ñ 18
+
+idioma2                                                                           #Un idioma de 2 caracteres, el número mínimo de ellos.
+2
+a 1 b 1
+
+---------
+TREECODE
+---------
+treecode idioma2                                                                  #Treecode de idioma con el minimo número de caracteres. Este caso podría
+                                                                                  llegar a dar problemas ya que es el caso más extremo y puede que en
+                                                                                  nuestra función creadora del treecode no lo hayamos contemplado.
+
+--------
+CÓDIGOS
+--------
+codigos idioma2 todos                                                             #Códigos de un idioma con el mínimo número de caracteres. En este caso, los
+                                                                                  códigos de los caracteres del idioma son lo más pequeños posible. Ya que
+                                                                                  uno de ellos será 0 y el otro 1. Queremos comprobar que así sea.
+
+---------
+CODIFICA
+---------
+codifica idioma1 ÀÇñÉÑ                                                            #Falla la última letra. En esta instrucción de codifica se utilizan
+                                                                                  unicamente caracteres especiales, de los cuales el de la última
+                                                                                  posición no pertenece al idioma. De esta manera comprobamos que la función
+                                                                                  correspondiente termina correctamente en este caso especial, retornando
+                                                                                  que no se puede codificar y la primera letra que falla.
+
+
+codifica idioma2 abababababbbaa                                                  #Codifica de un idioma de dos caracteres. El idioma2, al tener un Treecode
+                                                                                  especial, es posible que falle en la realización de esta función, ya que
+                                                                                  solo tiene dos hojas.
+
+-----------
+DECODIFICA
+-----------
+
+decodifica idioma1 111011100                                                     #Falla la ultima posición. Con esta instrucción se busca comprobar la
+                                                                                  la correcta implementación de la función "decodifica", probando el caso
+                                                                                  especial en el que se quiere decodificar un código que falla en la última
+                                                                                  posición en idioma de caracteres especiales.
+
+decodifica idioma2 1010101011111                                                 #Decodifica de un idioma con 2 caracteres.
+
+
+------------------------
+AÑADIR/MODIFICAR IDIOMA
+------------------------
+  -MODIFICAR
+  -----------
+anadir/modificar                                                                #Ninguno de los caracteres del nuevo idioma coincide con las del antiguo.
+idioma1                                                                         Esto significa que todas los caracteres del nuevo idioma se tendrán que
+3                                                                               añadir al del viejo. Al usar esta instrucción estamos probando que no hay
+ÿ 4 Ö 16 Ü 17                                                                   ningún problema a la hora de buscar caracteres especiales en el diccionario.
+
+
+
+anadir/modificar                                                                #Coincide un carácter especial. En este caso queremos probar que detecta este
+idioma1                                                                         carácter especial en el idioma1 y suma sus frecuencias consecuentemente.
+1
+Ü 4
+
+
+
+tabla_frec idioma1                                                              #Finalmente comprobamos que se ha actualizado la tabla de frecuencias, de
+                                                                                códigos y el treecode del idioma modificado.
+treecode idioma1
+
+codigos idioma1 Ü
+
+
+
+
+
+---------------<INPUT SIN COMENTAR>---------------
+
+2
+
+idioma1
+10
+À 1 Ç 2 ü 3 ë 4 Ä 5 É 6 ö 8 ú 11 Ã 15 ñ 18
+
+idioma2
+2
+a 1 b 1
+
+treecode idioma2
+
+codigos idioma2 todos
+
+codifica idioma1 ÀÇñÉÑ
+
+codifica idioma2 abababababbbaa
+
+decodifica idioma1 111011100
+
+decodifica idioma2 1010101011111
+
+anadir/modificar
+idioma1
+3
+ÿ 4 Ö 16 Ü 17
+
+anadir/modificar
+idioma1
+1
+Ü 4
+
+tabla_frec idioma1
+
+treecode idioma1
+
+codigos idioma1 Ü
+
+---------------<OUTPUT COMENTADO>------------------
+
+
+Treecode de idioma2:                                                            #Observamos que el treecode del idioma de dos caracteres se ha creado y
+recorrido en preorden:                                                          escrito correctamente.
+ab 2
+a 1
+b 1
+recorrido en inorden:
+a 1
+ab 2
+b 1
+
+Codigos de idioma2:                                                             #Correctamente, al ser un idioma de solo dos caracteres, a uno le corresponde
+a 0                                                                             de código un 1  y al otro un 0.
+b 1
+
+Codifica en idioma1 el texto:                                                   #Como queríamos probar, la función ha detectado que la palabra no pertenece
+ÀÇñÉÑ                                                                           al idioma y que la letra que falla es la Ñ
+El texto no pertenece al idioma; primer caracter que falla: Ñ
+
+Codifica en idioma2 el texto:                                                   #La codificación se ha realizado correctamente, la a se codifica como un 0 y
+abababababbbaa                                                                  la b como un 1.
+01010101011100
+
+Decodifica en idioma1 el texto:                                                 #El output correcto, ya que reconoce que el texto no se puede decodificar
+111011100                                                                       y nos indica que la última posición que se puede decodificar es la penúltima.
+El texto no procede de una codificacion del idioma; ultima posicion del
+codigo correspondiente al ultimo caracter que se podria decodificar: 8
+
+Decodifica en idioma2 el texto:                                                 #También se decodifica correctamente un código perteneciente al idioma de
+1010101011111                                                                   dos caracteres.
+bababababbbbb
+
+Modificado idioma1
+
+Modificado idioma1
+
+Tabla de frecuencias de idioma1:                                                #Podemos comprobar que se ha actualizado la tabla de frecuencias
+À 1                                                                             ya que se han añadido los caracteres nuevos y la frecuencia de Ü
+Ã 15                                                                            vale ahora 21.
+Ä 5
+Ç 2
+É 6
+Ö 16
+Ü 21
+ë 4
+ñ 18
+ö 8
+ú 11
+ü 3
+ÿ 4
+
+Treecode de idioma1:                                                            #Consecuentemente se han actualizado el treecode y la tabla de códigos.
+recorrido en preorden:
+ÀÇüÄöñÃÖÉëÿúÜ 114
+ÉëÿúÜ 46
+Ü 21
+Éëÿú 25
+ú 11
+Éëÿ 14
+É 6
+ëÿ 8
+ë 4
+ÿ 4
+ÀÇüÄöñÃÖ 68
+ÃÖ 31
+Ã 15
+Ö 16
+ÀÇüÄöñ 37
+ñ 18
+ÀÇüÄö 19
+ö 8
+ÀÇüÄ 11
+Ä 5
+ÀÇü 6
+ÀÇ 3
+À 1
+Ç 2
+ü 3
+recorrido en inorden:
+Ü 21
+ÉëÿúÜ 46
+ú 11
+Éëÿú 25
+É 6
+Éëÿ 14
+ë 4
+ëÿ 8
+ÿ 4
+ÀÇüÄöñÃÖÉëÿúÜ 114
+Ã 15
+ÃÖ 31
+Ö 16
+ÀÇüÄöñÃÖ 68
+ñ 18
+ÀÇüÄöñ 37
+ö 8
+ÀÇüÄö 19
+Ä 5
+ÀÇüÄ 11
+À 1
+ÀÇ 3
+Ç 2
+ÀÇü 6
+ü 3
+
+Codigo de Ü en idioma1:
+Ü 00
+
+
+---------------<OUTPUT SIN COMENTAR>---------------
+
+Treecode de idioma2:
+recorrido en preorden:
+ab 2
+a 1
+b 1
+recorrido en inorden:
+a 1
+ab 2
+b 1
+
+Codigos de idioma2:
+a 0
+b 1
+
+Codifica en idioma1 el texto:
+ÀÇñÉÑ
+El texto no pertenece al idioma; primer caracter que falla: Ñ
+
+Codifica en idioma2 el texto:
+abababababbbaa
+01010101011100
+
+Decodifica en idioma1 el texto:
+111011100
+El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: 8
+
+Decodifica en idioma2 el texto:
+1010101011111
+bababababbbbb
+
+Modificado idioma1
+
+Modificado idioma1
+
+Tabla de frecuencias de idioma1:
+À 1
+Ã 15
+Ä 5
+Ç 2
+É 6
+Ö 16
+Ü 21
+ë 4
+ñ 18
+ö 8
+ú 11
+ü 3
+ÿ 4
+
+Treecode de idioma1:
+recorrido en preorden:
+ÀÇüÄöñÃÖÉëÿúÜ 114
+ÉëÿúÜ 46
+Ü 21
+Éëÿú 25
+ú 11
+Éëÿ 14
+É 6
+ëÿ 8
+ë 4
+ÿ 4
+ÀÇüÄöñÃÖ 68
+ÃÖ 31
+Ã 15
+Ö 16
+ÀÇüÄöñ 37
+ñ 18
+ÀÇüÄö 19
+ö 8
+ÀÇüÄ 11
+Ä 5
+ÀÇü 6
+ÀÇ 3
+À 1
+Ç 2
+ü 3
+recorrido en inorden:
+Ü 21
+ÉëÿúÜ 46
+ú 11
+Éëÿú 25
+É 6
+Éëÿ 14
+ë 4
+ëÿ 8
+ÿ 4
+ÀÇüÄöñÃÖÉëÿúÜ 114
+Ã 15
+ÃÖ 31
+Ö 16
+ÀÇüÄöñÃÖ 68
+ñ 18
+ÀÇüÄöñ 37
+ö 8
+ÀÇüÄö 19
+Ä 5
+ÀÇüÄ 11
+À 1
+ÀÇ 3
+Ç 2
+ÀÇü 6
+ü 3
+
+Codigo de Ü en idioma1:
+Ü 00

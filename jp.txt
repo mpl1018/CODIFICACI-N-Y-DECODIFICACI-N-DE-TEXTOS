@@ -1,0 +1,37 @@
+2
+
+idioma1
+10
+À 1 Ç 2 ü 3 ë 4 Ä 5 É 6 ö 8 ú 11 Ã 15 ñ 18
+
+idioma2
+2
+a 1 b 1
+
+treecode idioma2
+
+codigos idioma2 todos
+
+codifica idioma1 ÀÇñÉÑ
+
+codifica idioma2 abababababbbaa
+
+decodifica idioma1 1110111001
+
+decodifica idioma2 1010101011111
+
+anadir/modificar
+idioma1
+3
+ÿ 4 Ö 16 Ü 17
+
+anadir/modificar
+idioma1
+1
+Ü 4
+
+tabla_frec idioma3
+
+treecode idioma3
+
+codigos idioma3 Ü
